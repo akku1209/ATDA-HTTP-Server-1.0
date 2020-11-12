@@ -1,13 +1,13 @@
-ATDA HTTP SERVER 1.0
+<h1 text-align='centre'>ATDA HTTP SERVER 1.0</h1>
 
-Supports following methods:
+<h2>Supports following methods:</h2>
 1. GET
 2. POST
 3. PUT
 4. DELETE
 5. HEAD
 
-Steps for Running Server:
+<h2>Steps for Running Server:</h2>
 1. change working directory to the root of the project
 2. change the permissions of /html/priv.html 
     >> chmod 300 /html/priv.html 
@@ -30,7 +30,7 @@ Steps for Running Server:
 7. you can check the logs in Log folder with levels of logging
 
 
-For auto-testing:
+<h2>For auto-testing:</h2>
 1. Run the autotester.py program 
     >>python3 autotester.py
 2. Press enter key for the report
