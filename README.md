@@ -14,20 +14,27 @@
 2. change the permissions of /html/priv.html 
     >> chmod 300 /html/priv.html 
 3. Configure the program by changing/ entering values in the server.config file <br />
-    (if you dont enter values, server will run using the default values)
+    (if you dont enter values, server will run using the default values)<br />
+    
+    Enter the configuration data as per below format:<br />
+    [DEFAULT]<br />
+    DocumentRoot = /home/divya/Documents/CN/Project/Final/html<br />
+    LogFileName = new10.txt<br />
+    MaxConnections = 10<br />
 
 4. start the server by using command:
     >> python3 main.py [port_number]
 
 5. Enter the menu option:
     a. to start server enter '1'
-    b. to end program enter '3'
+    b. to pause the server enter '2'
+    c. to end program enter '3'
     (you cannot pause server without starting it)
 
 6. Send request on 'http://127.0.0.1:[port_number]/[html_page]' <br />
     (you can choose htmls from html folder of your choice <br />
     a folder is already provided, but you can make your own <br />
-    just make sure you enter the path of folder in the server.config file) <br />
+    just make sure you enter the path of folder containing html documents; in the server.config file) <br />
 
 7. you can check the logs in Log folder with levels of logging
 

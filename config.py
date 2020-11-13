@@ -33,4 +33,4 @@ class configuration(object):
         if vals[2]!='':
             self._maxConnections = vals[2]
 
-        print (self._documentRoot,self._logFileName,self._maxConnections)
+        #print (self._documentRoot,self._logFileName,self._maxConnections)

@@ -40,7 +40,7 @@ def startServer(config):
     host = '127.0.0.1'
     global server_socket
     server_socket = socket(AF_INET, SOCK_STREAM)
-    #server_socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+    server_socket.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
     port = int(sys.argv[1])
     server_socket.bind(('', port))
     server_socket.listen(100)
@@ -61,7 +61,14 @@ def startServer(config):
     except IOError:
         err_type, value, traceback = sys.exc_info()
         #print('Error opening %s: %s' % (value.filename, value.strerror)):
-        writeLog("Fatal Error in Connection! Exception Type: "+err_type+" and Value: "+value,1,log_error) 
+        writeLog("Fatal Error in Connection! Exception Type: "+str(err_type)+" and Value: "+str(value),0,log_error) 
+
+
+def pauseServer(errcode):
+    global server_socket
+    server_socket.shutdown(SHUT_RDWR)
+    if(errcode!=0):
+        print('Fatal Error!')
 
 def stopServer(errcode):
     global server_socket
